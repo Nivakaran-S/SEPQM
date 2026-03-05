@@ -9,7 +9,7 @@ type MyFixtures = {
 const test = base.extend<MyFixtures>({
   mockDatabase: async ({}, use) => {
     // --- SETUP PHASE ---
-    console.log('▶️ [SETUP] Initializing mock database connection...');
+    console.log('[SETUP] Initializing mock database connection...');
     const dbConnection = 'db-connection-active';
     
     // --- EXECUTE TEST ---
@@ -17,7 +17,7 @@ const test = base.extend<MyFixtures>({
     await use(dbConnection); 
     
     // --- TEARDOWN PHASE ---
-    console.log('⏹️ [TEARDOWN] Closing mock database connection and cleaning up...');
+    console.log('[TEARDOWN] Closing mock database connection and cleaning up...');
   },
 });
 
